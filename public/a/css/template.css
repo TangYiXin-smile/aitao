@@ -1,0 +1,144 @@
+html,body{
+	width:100%;
+	height:100%;
+}
+ul {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+a:hover {
+	text-decoration:none;
+}
+.system {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.system .aside{
+	float:left;
+	width:180px;
+	height:100%;
+	background:#2f4050;
+}
+.aside .user{
+	background:#243443;
+	text-align:center;
+	padding:25px 0 15px 0;
+
+}
+.aside .user .logo{
+	display:inline-block;
+	width:80px;
+	height:80px;
+	border:3px solid rgba(255, 255, 255, 0.3);
+	border-radius:50%;
+	overflow:hidden;
+	// background:url("../images/my_logo.jpg") no-repeat;
+	// background-size:cover;
+}
+.aside .user .logo img{
+	display:block;
+	height:100%;
+}
+.aside .user h4{
+	color:#a9b0c2;
+	font-size:16px;
+}
+.aside .nav{
+
+}
+.aside .nav-list{
+	width:100%;
+	margin-top:25px;
+
+}
+.aside .nav-list li{
+	width:100%;
+	font-size:14px;
+}
+.aside .nav-list li a{
+	display:block;
+	height:38px;
+	line-height:38px;
+	width:100%;
+	color:#a9b0c2;
+	padding-left:20px;
+	margin:4px 0;
+}
+.aside .nav-list li a:hover{
+	background:#243443;
+	color:#F6F6F6;
+	text-decoration:none;
+}
+.aside .nav-list li .active{
+	background:#243443;
+}
+.aside .nav-list li i{
+	margin-right:15px;
+}
+.aside .nav-list li .fa-angle-right{
+	margin-left:4px;
+}
+.aside .nav-list .drop-down {
+	display:none;
+	overflow:hidden;
+}
+.aside .nav-list .drop-down li a{
+	padding-left:50px;
+}
+.system .main{
+	// width:100%;
+	height:100%;
+	overflow-y:auto;
+	// padding-left:180px;
+	background:#f4f6f8;
+}
+.main .header{
+	height:52px;
+	font-size:18px;
+	padding:12px 15px;
+	background:#fff;
+	overflow:hidden;
+}
+
+.header .leftBar{
+	display:inline-block;
+	width:26px;
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	background:#5cb85c;
+	color:#fff;
+	border-radius:2px;
+}
+.header .rightLogout{
+	font-size:15px;
+}
+
+
+.main .content{
+	background:#fff;
+	margin:20px;
+	padding:20px;
+}
+.content .info{
+	border:1px solid #ddd;
+	font-size:14px;
+	width:100%;
+}
+.content .info th,
+.content .info td {
+	text-align:center;
+	padding:8px 0;
+}
+.content .page{
+	margin-top:20px;
+}
+.content .addSome{
+	margin-bottom:20px;
+}
+
+#formBox .special{
+	margin-bottom:0;
+}

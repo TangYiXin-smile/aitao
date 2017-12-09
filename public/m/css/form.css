@@ -1,0 +1,43 @@
+.my-content {
+	background:#fff;
+	position:absolute;
+	top:44px;
+	bottom:50px;
+	left:0;
+	width:100%;
+}
+.my-content label{
+	font-size:14px;
+}
+.my-content .login-btn{
+	background:#006699;
+	color:#fff;
+	width:95%;
+	height:38px;
+	margin-top:15px;
+}
+.my-content .mui-input-group .mui-button-row{
+	height:57px;
+}
+.mui-input-group:after{
+	display:none;
+}
+.registerLink {
+	margin-top:20px;
+	text-align:right;
+	padding-right:10px;
+}
+
+.registerLink a{
+	font-size:14px;
+	color:#006699;
+}
+
+.getCode {
+	position:absolute;
+	right:10px;
+	top:50%;
+	transform:translateY(-50%);
+	font-size:14px;
+	color:#006699;
+}

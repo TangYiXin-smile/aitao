@@ -1,0 +1,45 @@
+.my-content .searchBox {
+	overflow:hidden;
+	position:relative;
+	padding:10px;
+}
+.my-content .searchBox input{
+	border:1px solid #006699;
+	border-radius:0px;
+}
+.searchBox .searchBtn{
+	height:28px;
+	width:60px;
+	background:#006699;
+	color:#fff;
+	float:right;
+	position:absolute;
+	right:10px;
+	bottom:10px;
+
+}
+.searchBox .search{
+	height:28px;
+	width:100%;
+	margin-bottom:0;
+	padding:0 70px 0 10px;
+	font-size:14px;
+}
+.my-content .mui-table-view:before,
+.my-content .mui-table-view:after{
+	display:none;
+}
+.mui-table-view-cell:last-child:after,
+.mui-table-view-cell:last-child:before{
+	height:1px;
+}
+
+.history .title span{
+	font-size:14px;
+	color:#8f8f94;
+	float:right;
+}
+
+#historyBox li{
+	padding-left:25px;
+}

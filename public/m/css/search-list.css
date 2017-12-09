@@ -1,0 +1,73 @@
+.container {
+	padding:10px;
+	background:#fff;
+}
+#content {
+	position:absolute;
+	top:44px;
+	bottom:50px;
+	left:0;
+}
+.top .title{
+	font-size:14px;
+	text-align:center;
+	height:37px;
+	line-height:37px;
+	background:#efeff4;
+}
+.top .title span{
+	font-size:12px;
+	margin-left:5px;
+	display:inline-block;
+}
+.bottom {
+
+}
+.bottom .product-list{
+	overflow:hidden;
+	padding:10px;
+	margin-top:5px;
+}
+.bottom .product-list li{
+	float:left;
+	width:50%;
+	text-align:center;
+	padding:5px;
+}
+.bottom .product-list li a{
+	display:block;
+	width:100%;
+	box-shadow:0 0 5px #ccc;
+	padding:0 5px;
+}
+.bottom .product-list li a img{
+	width:160px;
+	height:160px;
+}
+.bottom .product-list li a .name{
+	font-size:14px;
+	color:#8f8f94;
+	overflow:hidden;
+	display:block;
+	width:100%;
+	height:44px;
+	text-align:center;
+	line-height:18px;
+	padding:6px;
+
+}
+.bottom .product-list li a p{
+	font-size:12px;
+}
+.bottom .product-list li a .nowPress{
+	color:#f30;
+	margin-right:5px;
+}
+.bottom .product-list li a .oldPress{
+	text-decoration:line-through;
+}
+.bottom .product-list li a .btn{
+	background:#006699;
+	color:#fff;
+	margin-bottom:10px;
+}

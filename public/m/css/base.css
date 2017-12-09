@@ -1,0 +1,29 @@
+.my-bar,.my-footer{
+	background:#006699;
+}
+.my-bar.mui-bar .mui-title,.my-bar.mui-bar .mui-icon,
+.mui-bar-tab .mui-tab-item{
+	color:#fff;
+}
+.my-footer.mui-bar-tab .mui-tab-item.mui-active{
+	color:darkorange;
+}
+img{
+	vertical-align:top;
+}
+ul,li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body{
+	background:#fff;
+}
+.my-content{
+	width:100%;
+	position:absolute;
+	bottom:50px;
+	top:44px;
+	left:0;
+	background:#fff;
+}

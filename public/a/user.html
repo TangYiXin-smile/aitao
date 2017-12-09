@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>乐淘-用户管理</title>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/template.css">
+	<link rel="stylesheet" href="css/user.css">
+	<script src="assets/jquery/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/user.js"></script>
+</head>
+<body>
+	<div class="system">
+		<!-- 左侧盒子部分 -->
+		<div class="aside">
+			<div class="user">
+				<div class="logo">
+					<img src="images/my_logo.jpg" alt="">
+				</div>
+				<h4>张学友</h4>
+			</div>
+			<div class="nav">
+				<ul class="nav-list">
+					<li>
+						<a href="user.html" class="active"><i class="fa fa-user"></i>用户管理</a>
+					</li>
+					<li>
+						<a href="javascript:;" id="showMore"><i class="fa fa-bars"></i>分类管理<i class="fa fa-angle-right"></i></a>
+						<ul class="drop-down">
+							<li><a href="category-first.html">一级分类管理</a></li>
+							<li><a href="category-second.html">二级分类管理</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="product.html"><i class="fa fa-product-hunt"></i>商品管理</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /左侧盒子部分 -->
+
+		<!-- 右侧盒子部分 -->
+		<div class="main">
+			<div class="header">
+				<a href="javascript:;" class="leftBar pull-left" ><i class="fa fa-bars"></i></a>
+				<a href="javascript:;" class="pull-right rightLogout" id="logoutBtn"><i class="fa fa-sign-out"></i>退出</a>
+			</div>
+			<div class="content">
+				<table border=1 cellspacing=0 align="center" class="info">
+					<thead>
+						<tr>
+							<th>用戶名</th>
+							<th>电话</th>
+							<th>状态</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody id="userInfoBox">
+						
+					</tbody>
+				</table>
+				<div class="btn-group page">
+	        		<div class="btn btn-default" id="prevBtn">上一页</div>
+	        		<div class="btn btn-default" id="nextBtn">下一页</div>
+	        	</div>
+			</div>
+		</div>
+		<!-- /右侧盒子部分 -->
+	</div>
+	<script type="text/html" id="userInfoTpl">
+		<%for(var i=0;i<data.length;i++){ %>
+			<tr>
+				<td><%=data[i].username %></td>
+				<td><%=data[i].mobile %></td>
+				<td id="status">
+					<%=data[i].isDelete ==0 ? '已禁用':'已启用' %>
+				</td>
+				<td>
+					<%if(data[i].isDelete ==0){ %>
+						<button type="button" class="btn btn-success" id="delBtn" data-isdel="<%=data[i].isDelete %>" data-id="<%=data[i].id%>">启用</button>
+					<% }else{ %>
+						<button type="button" class="btn btn-danger" id="delBtn" data-isdel="<%=data[i].isDelete %>" data-id="<%=data[i].id%>">禁用</button>
+					<% } %>
+				</td>
+			</tr>
+		<% } %>
+	</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>乐淘云购</title>
+	<link rel="stylesheet" href="assets/mui/css/mui.min.css">
+	<link rel="stylesheet" href="assets/mui/css/iconfont.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/category.css">
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="js/common.js"></script>
+	<!--
+		模板引擎的作用:帮我们将数据和字符串拼接在一起
+	-->
+	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="js/category.js"></script>	
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav my-header">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">乐淘云购</h1>
+		<a class="mui-action-back mui-icon mui-icon-search mui-pull-right"></a>
+	</header>
+	<nav class="mui-bar mui-bar-tab footer my-footer">
+		<a class="mui-tab-item" href="index.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item mui-active" href="category.html">
+			<span class="mui-icon mui-icon-bars"></span>
+			<span class="mui-tab-label">分类</span>
+		</a>
+		<a class="mui-tab-item" href="cart.html">
+			<span class="mui-icon iconfont icon-gouwuche"></span>
+			<span class="mui-tab-label">购物车</span>
+		</a>
+		<a class="mui-tab-item" href="user.html">
+			<span class="mui-icon mui-icon-person"></span>
+			<span class="mui-tab-label">会员中心</span>
+		</a>
+	</nav>
+	<div class="my-content">
+		<div class="left">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="left-list" id="leftListBox">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="brand-list" id="rightListBox">
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script id="leftListTpl" type="text/html">
+		<% for(var i=0;i<data.length;i++) { %>
+			<li data-id="<%=data[i].id %>">
+				<span><%=data[i].categoryName %></span>
+			</li>
+		<% } %>
+	</script>
+
+	<script id="rightListTpl" type="text/html">
+		<% for(var i=0;i<data.length;i++){ %>
+		<li>
+			<img src="<%=data[i].brandLogo %>">
+			<p><%=data[i].brandName %></p>
+		</li>
+		<% } %>
+		
+		<% if(data.length == 0){ %>
+			<span>暂无数据</span>
+		<% } %>
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+.my-content{
+	width:100%;
+	position:absolute;
+	top:44px;
+	bottom:50px;
+	left:0;
+	background:#fff;
+}
+.my-content .address{
+	text-align:center;
+	margin-bottom:0px;
+	border-bottom:1px solid #ccc;
+}
+.my-content .address a{
+	display:block;
+	height:43px;
+	line-height:43px;
+	color:#000;
+}
+.my-content .mui-input-row::after{
+	content:'';
+	height:1px;
+	background:#c8c7cc;
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:15px;
+}
+.my-content .last::after{
+	left:0px;
+}
+.my-content .mui-input-clear {
+	border:none;
+	margin-bottom:0;
+}
+.my-content .inform{
+	font-size:14px;
+	color:#000;
+}
+
+

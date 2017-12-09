@@ -1,0 +1,91 @@
+.my-content .mui-table-view-cell>a:not(.mui-btn){
+	white-space:normal;
+}
+#priceBox{
+	text-decoration:none;
+}
+.orther {
+	overflow:hidden;
+}
+.orther div{
+	display:inline-block;
+	color:#8f8f94;
+	font-size:14px;
+}
+.orther .left{
+	margin-right:70px;
+	float:left;
+}
+.orther .left .nowPrice{
+	color:#f30;
+}
+.orther .left .oldPrice{
+	text-decoration:line-through;
+}
+.orther .middle{
+	margin-right:50px;
+	float:right;
+}
+.orther .right{
+	float:right;
+}
+.total{
+	margin:20px 15px;
+	overflow:hidden;
+}
+.total span{
+	float:right;
+	width:70px;
+	height:30px;
+	background:#f0ad4e;
+	color:#fff;
+	text-align:center;
+	line-height:30px;
+	font-size:14px;
+	font-weight:normal;
+}
+.size {
+	padding:10px;
+	font-size:14px;
+	border-bottom:1px solid #ccc;
+}
+.size span{
+	display:inline-block;
+	width:28px;
+	height:28px;
+	margin-right:10px;
+	margin-bottom:10px;
+	border:1px solid #ccc;
+	text-align:center;
+	line-height:28px;
+}
+.size .active{
+	background:#fa672d;
+	color:#fff;
+}
+.number {
+	padding:10px;
+	font-size:14px;
+	border-bottom:1px solid #ccc;
+}
+
+.number span{
+	display:inline-block;
+	width:28px;
+	height:28px;
+	border:1px solid #ccc;
+	text-align:center;
+	line-height:28px;
+}
+.number input{
+	width:28px;
+	height:28px;
+	text-align:center;
+	line-height:28px;
+	vertical-align:top;
+	margin:0;
+	padding:0;
+	border:0 none;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}

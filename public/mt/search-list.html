@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>搜索结果</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="assets/mui/css/mui.min.css">
+	<link rel="stylesheet" href="assets/mui/css/iconfont.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/search-list.js"></script>
+	<style>
+		.my-style{
+			text-align:center;
+			background:#ccc;
+			display:block;
+			height:36px;
+			line-height:36px;
+		}
+
+		.my-content{
+			position:absolute;
+			left:0;
+			top:44px;
+			bottom:50px;
+			background:#FFF;
+			overflow:hidden;
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav my-header">
+		<h1 class="mui-title">搜索结果</h1>
+		<a class="mui-action-back mui-icon mui-icon-search mui-pull-right"></a>
+	</header>
+	<nav class="mui-bar mui-bar-tab footer my-footer">
+		<a class="mui-tab-item mui-active" href="index.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="category.html">
+			<span class="mui-icon mui-icon-bars"></span>
+			<span class="mui-tab-label">分类</span>
+		</a>
+		<a class="mui-tab-item" href="cart.html">
+			<span class="mui-icon iconfont icon-gouwuche"></span>
+			<span class="mui-tab-label">购物车</span>
+		</a>
+		<a class="mui-tab-item" href="user.html">
+			<span class="mui-icon mui-icon-person"></span>
+			<span class="mui-tab-label">会员中心</span>
+		</a>
+	</nav>
+	<div class="my-content" id="my-content">
+		<div>
+			<div class="mui-row">
+			       <div class="mui-col-sm-6 mui-col-xs-6">
+			           <div class="mui-table-view-cell">
+			               <span class="mui-navigate-right my-style" id="priceSortBtn">
+			                   价格
+			               </span>
+			           </div>
+			       </div>
+			       <div class="mui-col-sm-6 mui-col-xs-6">
+			           <div class="mui-table-view-cell">
+			               <span class="mui-navigate-right my-style">
+								销量
+			               </span>
+			           </div>
+			       </div>
+			</div>
+			<div class="life">
+				<ul class="product-list" id="productBox">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/html" id="productTpl">
+		<% for(var i=0;i<data.length;i++){ %>
+		<li>
+			<a href="#">
+				<img src="<%=data[i].pic[0].picAddr %>">
+				<span class="name"><%=data[i].proName %></span>
+				<p>
+					<span class="nowPrice">¥<%=data[i].price %></span>
+					<span class="oldPrice">¥<%=data[i].oldPrice %></span>
+				</p>
+				<span class="buy">立即购买</span>
+			</a>
+		</li>
+		<% } %>
+	</script>
+</body>
+</html>

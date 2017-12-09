@@ -1,0 +1,110 @@
+.mui-content{
+	background:#FFF;
+}
+
+img{
+	vertical-align:top;
+}
+
+.navs{
+	overflow:hidden;
+	padding:10px;
+}
+
+.navs a{
+	display:block;
+	width:33.333%;
+	float:left;
+}
+
+.navs img{
+	width:100%;
+}
+
+.product,
+.life{
+	padding:0 10px;
+}
+
+.product .title,
+.life .title{
+	width:100%;
+}
+
+.product .brand-list{
+	list-style:none;
+	overflow:hidden;
+	margin:0;
+	padding:10px 0;
+}
+
+.product .brand-list li{
+	width:25%;
+	float:left;
+}
+
+.product .brand-list img{
+	width:100%;
+}
+
+
+.product-list{
+	overflow:hidden;
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.product-list li{
+	width:50%;
+	float:left;
+	padding:0 5px;
+	margin-top:10px;
+}
+
+.product-list li a{
+	display:block;
+	box-shadow:0 0 5px #ccc;
+	padding:0 10px;
+	text-align:center;
+	overflow:hidden;
+}
+
+
+.product-list li img{
+	width:100%;
+}
+
+.product-list li .name{
+	font-size:14px;
+	color:#8f8f94;
+	line-height:18px;
+	display:block;
+}
+
+.product-list li p{
+	font-size:12px;
+}
+
+.product-list li .nowPrice{
+	color:#f30;
+	margin-right:3px;
+}
+
+.product-list li .oldPrice{
+	color:#ccc;
+	text-decoration:line-through;
+}
+
+.product-list li .buy{
+	display:block;
+	width:80px;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	background:#006699;
+	color:#FFF;
+	margin:0 auto;
+	border-radius:3px;
+	margin-bottom:15px;
+}

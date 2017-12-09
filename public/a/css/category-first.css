@@ -1,0 +1,22 @@
+.content .conTitile{
+	padding:10px 20px;
+	border-bottom:1px solid #e5e5e5;
+}
+.content .conTitile h4{
+	
+}
+.content .pleaseInp {
+	padding:15px 15px 25px;
+	border-bottom:1px solid #e5e5e5;
+}
+.content .btns{
+	text-align:right;
+	padding:20px;
+}
+.inpBox {
+	padding-top:10px;
+}
+.inpBox input{
+	vertical-align:middle;
+	margin-top:0;
+}

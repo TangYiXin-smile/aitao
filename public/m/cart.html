@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/mui/css/mui.min.css">
+	<link rel="stylesheet" href="assets/mui/css/iconfont.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/cart.css">
+	<script src="assets/mui/js/mui.min.js"></script>
+	<script src="assets/zepto/zepto.min.js"></script>
+	<script src="assets/artTemplate/template-native.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/cart.js"></script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav my-bar">
+		<a href="javascript:;" class="mui-icon mui-icon-left-nav mui-pull-left" id="leftBackBtn"></a>
+		<h1 class="mui-title">购物车</h1>
+		<a href="javascript:;" class="mui-icon mui-icon-reload mui-pull-right" id="reloadBtn"></a>
+	</header>
+	<nav class="mui-bar mui-bar-tab footer my-footer">
+		<a class="mui-tab-item" href="index.html">
+			<span class="mui-icon mui-icon-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="category.html">
+			<span class="mui-icon mui-icon-bars"></span>
+			<span class="mui-tab-label">分类</span>
+		</a>
+		<a class="mui-tab-item mui-active" href="cart.html">
+			<span class="mui-icon iconfont icon-gouwuche"></span>
+			<span class="mui-tab-label">购物车</span>
+		</a>
+		<a class="mui-tab-item" href="user.html">
+			<span class="mui-icon mui-icon-person"></span>
+			<span class="mui-tab-label">会员中心</span>
+		</a>
+	</nav>
+	<div class="my-content">
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<ul class="mui-table-view" id="cartInfoBox">
+				    
+				</ul>
+				<h4 class="total">订单总额 : ¥<s id="priceBox">0.00</s> <span id="delManyBtn">批量删除</span></h4>
+			</div>
+		</div>
+	</div>
+	<script type="text/html" id="cartInfoTpl">
+		<%for(var i=0;i<data.length;i++){ %>
+		    <li class="mui-table-view-cell mui-selected mui-transitioning">
+				<div class="mui-slider-right mui-disabled mui-selected">
+					<a href="javascript:;" class="mui-btn mui-btn-blue modifyBtn" data-productid="<%=data[i].productId%>">编辑</a>
+					<a href="javascript:;" class="mui-btn mui-btn-red deleteBtn" data-id="<%=data[i].id%>">删除</a>
+				</div>
+				<div class="mui-slider-handle">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="<%=data[i].pic[0].picAddr%>">
+			            <div class="mui-media-body">
+							<p><%=data[i].proName%></p>
+			                <div class="orther">
+			                	<div class="left">
+			                		<input type="checkbox" name="select" data-id="<%=data[i].id%>">
+			                		<span class="nowPrice">¥<%=data[i].price%></span>
+			                		<span class="oldPrice">¥<%=data[i].oldPrice%></span>
+			                	</div>
+			                	<div class="right">x<%=data[i].num%>双</div>
+								<div class="middle">鞋码 : <%=data[i].size%></div>
+			                </div>
+			            </div>
+			        </a>
+				</div>
+			</li>
+		<% } %>
+	</script>
+	<script type="text/html" id="modifyTpl">
+		<div class="size">尺码 :<%for(var i=0;i<sizeArr.length;i++){ %><span class="item"><%=sizeArr[i]%></span><% } %>
+		</div><div class="number">数量 :<span id="sub">-</span><input type="number" value="1" id="numInp"><span id="add">+</span>
+	</script>
+</body>
+</html>

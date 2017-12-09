@@ -1,0 +1,24 @@
+.my-content{
+	width:100%;
+	position:absolute;
+	top:44px;
+	bottom:50px;
+	left:0;
+	background:#fff;
+}
+.my-content .user-list {
+	font-size:14px;
+}
+.my-content .logout{
+	text-align:center;
+	border-bottom:1px solid #c8c7cc;
+}
+.my-content .logout a{
+	display:block;
+	height:43px;
+	line-height:43px;
+	color:#000;
+}
+.mui-media.mui-table-view-cell:after{
+	left:0;
+}

@@ -1,0 +1,74 @@
+$(function(){
+	//修改密码页面
+	//获取验证码
+	$('#getCode').on('tap',function(){
+		$.ajax({
+			url:'/user/vCodeForUpdatePassword',
+			type:'get',
+			success:function(result){
+				if(result.vCode){
+					alert(result.vCode);
+				}
+			}
+		});
+	});
+	//修改密码操作
+	$('#modifyBtn').on('tap',function(){
+		//获取数据
+		var data = {
+			oldPassword:$.trim($('#oldPassword').val()),
+			newPassword:$.trim($('#newPassword').val()),
+			confirmPwd:$.trim($('#confirmPwd').val()),
+			vCode:$.trim($('#vCode').val())
+		}
+		//判断数据不为空
+		if(!data.oldPassword){
+			mui.toast("请输入原密码");
+			return;
+		}
+		if(!data.newPassword){
+			mui.toast("请输入新密码");
+			return;
+		}
+		if(!data.confirmPwd){
+			mui.toast("请输入新密码");
+			return;
+		}
+		if(data.newPassword != data.confirmPwd){
+			mui.toast("两次输入的密码不一致");
+			return;
+		}
+		if(!/^\d{6}$/.test(data.vCode)){
+			mui.toast("验证码格式不正确");
+			return;
+		}
+		var This = $(this);
+		//发送请求修改密码
+		$.ajax({
+			url:'/user/updatePassword',
+			type:'post',
+			data:data,
+			success:function(result){
+				//如果修改成功则跳转到登录页面
+				if(result.success){
+					This.html('修改成功');
+					setTimeout(function(){
+						location.href = 'login.html';
+					},1000);
+				}else{
+					//修改失败判断原因
+					//没有登录不能修改密码
+					if(result.error == 400){
+						mui.toast('您还没有登录，请先登录');
+						setTimeout(function(){
+							localStorage.setItem('returnUrl',location.href);
+							location.href = 'login.html';
+						},1000);
+					}else{
+						mui.toast(result.message);
+					}
+				}
+			}
+		});
+	});
+});
